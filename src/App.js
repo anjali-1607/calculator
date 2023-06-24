@@ -9,6 +9,24 @@ export default function App() {
     const joinValues = mergeValue.join("");
     setValue(joinValues);
   };
+
+  const erase = () => {
+    // console.log(num);
+    const splittedValue = value.split("");
+    console.log(splittedValue);
+    const mergeValue = splittedValue.pop();
+    console.log(mergeValue);
+    console.log(...splittedValue);
+    // const mergeValue=[...splittedValue,num]
+    const joinValues = splittedValue.join("");
+    setValue(joinValues);
+    console.log(joinValues);
+  };
+
+  const dlt = (num) => {
+    setValue("");
+  };
+
   return (
     <>
       <div className="grand">
@@ -17,8 +35,12 @@ export default function App() {
             <div className="input_div">
               <input value={value} className="input_text" placeholder="0" />
             </div>
-            <button className="child">Cl</button>
-            <button className="child">DEL</button>
+            <button className="child" onClick={erase}>
+              Cl
+            </button>
+            <button className="child" onClick={dlt}>
+              DEL
+            </button>
             <button
               className="child"
               onClick={() => {
@@ -133,8 +155,9 @@ export default function App() {
             </button>
             <button
               className="equal"
-              onClick={() => {
-                handleClick("=");
+              onClick={(num) => {
+                const equal = eval(value);
+                setValue(equal);
               }}>
               =
             </button>
