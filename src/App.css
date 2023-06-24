@@ -22,17 +22,17 @@
   grid-gap: 15px;
 }
 
-input {
+.input_div {
   grid-column: span 4;
   height: 5em;
-  background-color: #3d3d3d;
+
   border-radius: 10px;
-  color: rgb(223, 223, 223);
-  font-size: 30px;
-  text-align: end;
-  margin-bottom: 1em;
+  color: rgb(193, 193, 193);
+
+  margin-bottom: 2em;
   margin-top: 1em;
-  padding-right: 15px;
+  margin-right: 7px;
+  /* padding-right: 15px; */
 }
 
 .child {
@@ -61,4 +61,13 @@ input {
 .equal:hover {
   box-shadow: 0 0 10px 0 #a5a5a5 inset, 0 0 20px 2px #7f7f7f;
   border: 3px solid #9b9b9b;
+}
+
+.input_text {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  text-align: end;
+  background-color: #3d3d3d;
+  color: #ffffff;
 }

@@ -1,35 +1,143 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const one = () => {};
+  const [value, setValue] = useState("");
+  const handleClick = (num) => {
+    const splittedValue = value.split("");
+    const mergeValue = [...splittedValue, num];
+    const joinValues = mergeValue.join("");
+    setValue(joinValues);
+  };
   return (
     <>
       <div className="grand">
         <div className="grand_parent">
           <div className="parent">
-            <input type="text "></input>
+            <div className="input_div">
+              <input value={value} className="input_text" placeholder="0" />
+            </div>
             <button className="child">Cl</button>
             <button className="child">DEL</button>
-            <button className="child">%</button>
-            <button className="child">/</button>
-            <button className="child">7</button>
-            <button className="child">8</button>
-            <button className="child">9</button>
-            <button className="child">*</button>
-            <button className="child">4</button>
-            <button className="child">5</button>
-            <button className="child">6</button>
-            <button className="child">-</button>
-            <button className="child" onClick={one}>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("%");
+              }}>
+              %
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("/");
+              }}>
+              /
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("7");
+              }}>
+              7
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("8");
+              }}>
+              8
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("9");
+              }}>
+              9
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("*");
+              }}>
+              *
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("4");
+              }}>
+              4
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("5");
+              }}>
+              5
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("6");
+              }}>
+              6
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("-");
+              }}>
+              -
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("1");
+              }}>
               1
             </button>
-            <button className="child">2</button>
-            <button className="child">3</button>
-            <button className="child">+</button>
-            <button className="child">0</button>
-            <button className="child">.</button>
-            <button className="equal">=</button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("2");
+              }}>
+              2
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("3");
+              }}>
+              3
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("+");
+              }}>
+              +
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick("0");
+              }}>
+              0
+            </button>
+            <button
+              className="child"
+              onClick={() => {
+                handleClick(".");
+              }}>
+              .
+            </button>
+            <button
+              className="equal"
+              onClick={() => {
+                handleClick("=");
+              }}>
+              =
+            </button>
           </div>
         </div>
       </div>
