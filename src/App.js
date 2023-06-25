@@ -157,7 +157,7 @@ export default function App() {
               className="equal"
               onClick={(num) => {
                 const equal = eval(value);
-                setValue(equal);
+                setValue(String(equal));
               }}>
               =
             </button>
